@@ -34,10 +34,17 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: null,
     },
-    tutorials: {
-        type: mongoose.Schema.ObjectId,
-        ref: "Tutorial"
-    }
+    tutorials: [{
+        tutorial: {
+            type: mongoose.Schema.ObjectId,
+            ref: "Tutorial"
+        },
+        status: {
+            type: String,
+            enum: ['done', 'open'],
+            default: 'open'
+        }
+    }]
 })
 
 

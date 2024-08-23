@@ -7,11 +7,6 @@ const tutorialSchema = new mongoose.Schema({
         enum: ['video', 'blog'],
         default: "blog"
     },
-    status: {
-        type: String,
-        enum: ['done', 'open'],
-        default: 'open'
-    },
     link: String
 });
 

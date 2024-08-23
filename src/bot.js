@@ -25,7 +25,7 @@ const startBot = () => {
         };
 
         try {
-            const response = await axios.post('http://localhost:3000/api/v1/users/create', {
+            const response = await axios.post('https://twaback.onrender.com/api/v1/users/create', {
                 userData,
                 start_param: referrerId
             });
